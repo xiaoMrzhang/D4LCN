@@ -676,7 +676,8 @@ def init_visdom(conf_name, visdom_port):
     If there is no visdom server running (externally), then function will return 'None'.
     """
     try:
-        vis = visdom.Visdom(server='http://10.5.36.31', port=visdom_port, env=conf_name)
+        vis = visdom.Visdom(server='http://10.5.36.31', port=visdom_port, env=conf_name,
+                            use_incoming_socket=False)
         vis.close(env=conf_name, win=None)
 
         if vis.socket_alive:

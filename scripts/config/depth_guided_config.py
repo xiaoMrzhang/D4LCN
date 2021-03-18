@@ -20,7 +20,7 @@ def Config():
     conf.do_test = True
     conf.lr_policy = 'onecycle'  # 'onecycle'  # 'cosinePoly'  # 'cosineRestart'  # 'poly'
     conf.restart_iters = 5000
-    conf.batch_size = 2 * 4
+    conf.batch_size = 1
     conf.base_model = 50
     conf.depth_channel = 1
     conf.adaptive_diated = True

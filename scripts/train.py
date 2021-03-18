@@ -52,7 +52,8 @@ def main(argv):
     init_torch(conf.rng_seed, conf.cuda_seed)
     init_log_file(paths.logs)
 
-    vis = init_visdom(conf.result_dir, conf.visdom_port)
+    # vis = init_visdom(conf.result_dir, conf.visdom_port)
+    vis = None
 
     # defaults
     start_iter = 0
